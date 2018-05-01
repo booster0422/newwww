@@ -1,0 +1,42 @@
+#red-box{
+  width: 100px;
+  height: 100px;
+  background: red
+}
+
+#blue-box{
+  width: 100px;
+  height: 100px;
+  background: blue;
+  right:100px;
+}
+
+#yellow-box{
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  right:200px;
+}
+
+#white-box{
+  background-color: white;
+  border: dotted #008080;
+}
+
+.drag-and-drop {
+    cursor: move;
+    position: absolute;
+    z-index: 1000;
+}
+
+.drag {
+    z-index: 1001;
+}
+
+.square{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  /* top: 200px;
+  right: 200px; */
+}
