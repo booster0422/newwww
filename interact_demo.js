@@ -17,7 +17,7 @@ function runInteract() {
     // call this function on every dragend event
     onend: function(event) {
       var textEl = event.target.querySelector("p");
-
+      // console.log(textEl);
       textEl &&
         (textEl.textContent =
           "moved a distance of " +
@@ -49,8 +49,6 @@ function runInteract() {
   window.dragMoveListener = dragMoveListener;
 
   interact(".dropzone").dropzone({
-    // only accept elements matching this CSS selector
-    accept: "#yes-drop",
     // Require a 75% element overlap for a drop to be possible
     overlap: 0.75,
 
@@ -76,6 +74,8 @@ function runInteract() {
       event.relatedTarget.textContent = "Dragged out";
     },
     ondrop: function(event) {
+      var textEl = event.target;
+      console.log(textEl);
       event.relatedTarget.textContent = "Dropped";
     },
     ondropdeactivate: function(event) {
